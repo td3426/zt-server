@@ -1,0 +1,30 @@
+{
+	"apps":
+	[
+		{
+			"name": "usercenter-production", 
+			"env": 
+			{
+				"NODE_ENV": "production"
+			},
+			"instances": "max",
+			"exec_mode": "cluster",
+			"script": "./app.js",
+			"error_file": "/var/log/error-usercenter-production.log",
+			"out_file": "/var/log/out-usercenter-production.log"
+		},
+		{
+			"name": "usercenter-production-async-task",
+			"env":
+			{
+				"NODE_ENV": "production"
+			},
+			"instances": 1,
+			"script": "./node_modules/sails/bin/sails.js",
+			"args": ["run", "async-task"],
+			"error_file": "/var/log/error-usercenter-production-async-task.log",
+			"out_file": "/var/log/out-usercenter-production-async-task.log"
+		}
+	]
+}
+
