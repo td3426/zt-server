@@ -1,0 +1,10 @@
+.DS_Store  diff=nodiff
+*.pdf diff=nodiff
+assets/** diff=nodiff
+bin/** diff=nodiff
+cert/** diff=nodiff
+doc/** diff=nodiff
+uimg/** diff=nodiff
+tasks/** diff=nodiff
+tests/** diff=nodiff
+config/local.js diff=nodiff	
